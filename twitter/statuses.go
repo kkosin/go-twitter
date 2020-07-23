@@ -48,11 +48,18 @@ type Tweet struct {
 	QuotedStatusID       int64                  `json:"quoted_status_id"`
 	QuotedStatusIDStr    string                 `json:"quoted_status_id_str"`
 	QuotedStatus         *Tweet                 `json:"quoted_status"`
+	QuotedStatusPermalink *QuotedStatusPermalink `json:"quoted_status_permalink"`
 }
 
 // CreatedAtTime returns the time a tweet was created.
 func (t Tweet) CreatedAtTime() (time.Time, error) {
 	return time.Parse(time.RubyDate, t.CreatedAt)
+}
+
+type QuotedStatusPermalink struct {
+	url         string          `json:"url"`
+	expanded 	string         	`json:"expanded"`
+	display     string       	`json:"display"`
 }
 
 // ExtendedTweet represents fields embedded in extended Tweets when served in
