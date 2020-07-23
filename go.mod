@@ -1,4 +1,4 @@
-module github.com/kosin/go-twitter
+module github.com/kkosin/go-twitter
 
 go 1.12
 
