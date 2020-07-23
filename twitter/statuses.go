@@ -57,9 +57,9 @@ func (t Tweet) CreatedAtTime() (time.Time, error) {
 }
 
 type QuotedStatusPermalink struct {
-	url         string          `json:"url"`
-	expanded 	string         	`json:"expanded"`
-	display     string       	`json:"display"`
+	Url         string          `json:"url"`
+	Expanded 	string         	`json:"expanded"`
+	Display     string       	`json:"display"`
 }
 
 // ExtendedTweet represents fields embedded in extended Tweets when served in
